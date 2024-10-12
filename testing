@@ -1,0 +1,15 @@
+-- ID анимации
+local animationId = "913402848"
+
+-- Получаем персонажа игрока
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+-- Создаем объект анимации
+local animator = character:WaitForChild("Humanoid"):FindFirstChild("Animator") or Instance.new("Animator", character:WaitForChild("Humanoid"))
+local animation = Instance.new("Animation")
+animation.AnimationId = "rbxassetid://" .. animationId
+
+-- Воспроизводим анимацию
+local animationTrack = animator:LoadAnimation(animation)
+animationTrack:Play()
