@@ -1,3 +1,0 @@
-local animator = game.Players.LocalPlayer.Character:WaitForChild("Humanoid"):FindFirstChild("Animator") or Instance.new("Animator", game.Players.LocalPlayer.Character:WaitForChild("Humanoid"))
-local animation = Instance.new("Animation"); animation.AnimationId = "rbxassetid://94532636564654"
-local animationTrack = animator:LoadAnimation(animation); animationTrack:Play()
